@@ -206,11 +206,11 @@ Kami membutuhkan bantuan anda">
                 <?= csrf_field(); ?>
  
               <div class="form-group">
-                <input id="nama" name="nama" type="text" class="form-control" placeholder="Nama Lengkap" required="true"
+                <input id="nama" name="nama" type="text" pattern="[A-Za-z ]+" maxlength="17" class="form-control" placeholder="Nama Lengkap" required="true"
                      value="<?= old('nama'); ?>">
               </div>
               <div class="form-group">
-                <input id="telepon" name="telepon" type="tel" class="form-control" placeholder="Nomor Telepon" required="true" maxlength="12"
+                <input id="telepon" name="telepon"  type="tel" class="form-control" placeholder="Nomor Telepon" required="true" maxlength="12"
                    value="<?= old('telepon'); ?>">
               </div>
               <div class="form-group">

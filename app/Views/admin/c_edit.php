@@ -23,10 +23,10 @@
                     <label for="nama">Nama</label>
                     <input type="text" class="form-control" id="nama" name="nama" value="<?= $crew->nama; ?>">
                 </div>
-                <div class="form-group">
-                        <label for="gambar" class="form-label">Gambar</label>
-                        <input type="file" class="form-control" id="gambar" name="gambar" >
-                    </div>
+                    <div class="form-group">
+                         <input type="file" id="gambar" name="gambar" class="form-control"> 
+                    </div>  
+                
                     <div class="form-group">
                         <input type="submit" class="btn btn-info" value="Update" />
                     </div>

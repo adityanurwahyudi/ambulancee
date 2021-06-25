@@ -72,16 +72,17 @@ class Crew extends BaseController
         $data['crew'] = $dataCrew;
         return view('admin/c_edit', $data);
     }
+	
 	public function update($id)
     {
         if (!$this->validate([
-			'nama' => [
+    		'nama' => [
 				'rules' => 'required',
 				'errors' => [
 					'required' => '{field} Tidak boleh kosong'
 				]
-			],
-			'gambar' => [
+				],
+				'gambar' => [
 				'rules' => 'uploaded[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]|max_size[gambar,2048]',
 				'errors' => [
 					'uploaded' => 'Harus Ada File yang diupload',
@@ -90,6 +91,7 @@ class Crew extends BaseController
 				]
  
 			]
+	
         ])) {
             session()->setFlashdata('error', $this->validator->listErrors());
             return redirect()->back();
@@ -97,14 +99,16 @@ class Crew extends BaseController
 		$crew = new CrewModel();
 		$dataCrew = $this->request->getFile('gambar');
 		$fileName = $dataCrew->getRandomName();
-		$this->booking->update($id, [
+		$this->crew->update([
 			'gambar' => $fileName,
-			'nama' => $this->request->getPost('nama')
+			'nama' => $this->request->getVar('nama')
 		]);
 		$dataCrew->move('uploads/crew/', $fileName);
-		session()->setFlashdata('success', 'Crew Berhasil diupdate');
-		return redirect()->to(base_url('crew'));
+        session()->setFlashdata('message', 'Update Data Booking Berhasil');
+        return redirect()->to('/crew');	
 	}
+
+
 		function delete($id)
     {
         $dataCrew = $this->crew->find($id);

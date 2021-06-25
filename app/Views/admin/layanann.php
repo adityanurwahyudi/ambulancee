@@ -81,7 +81,7 @@ $(document).ready(function(){
                             <tr>
                                 <td><?= $nomor++; ?></td>
                                 <td><?= $row->nama; ?></td>
-                                <td><img width="150px" class="img-thumbnail" src="<?= base_url() . "/uploads/gambar/" . $row->gambar; ?>"></td>
+                                <td><img width="150px" class="img-thumbnail" src="<?= base_url() . "/uploads/layanan/" . $row->gambar; ?>"></td>
                                 <td><?= $row->desc; ?></td>
                                 <td><?= $row->created_at; ?></td>
                                 <td>

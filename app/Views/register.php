@@ -802,7 +802,6 @@ input.checkbox:checked:after {
 					<input class="text" type="text" id="username" name="username" placeholder="Username" required="true">
 					<input class="text email" type="text" id="name" name="name" placeholder="Nama Lengkap" required="true">
 					<input class="text" type="password" name="password" id="password" placeholder="Password" required="true">
-					<input class="text w3lpass" type="password" id="password_conf" name="password_conf" placeholder="Confirm Password" required="true">
 					
 					<input type="submit" value="SIGNUP">
 				</form>
@@ -826,4 +825,5 @@ input.checkbox:checked:after {
 	</div>
 	<!-- //main -->
 </body>
+
 </html>

@@ -80,7 +80,7 @@ $(document).ready(function(){
                             <tr>
                                 <td><?=  $nomor++; ?></td>
                                 <td><?= $row->nama; ?></td>
-                                <td><img width="150px" class="img-thumbnail" src="<?= base_url() . "/uploads/gambar/" . $row->gambar; ?>"></td>
+                                <td><img width="150px" class="img-thumbnail" src="<?php echo base_url('/uploads/crew/'.$row->gambar);?>"/></td>
                                 <td><?= $row->created_at; ?></td>
                                 <td>
                             <a title="Edit" href="<?= base_url("crew/c_edit/$row->id_crew"); ?>" class="btn btn-info">Edit</a>
