@@ -6,6 +6,7 @@ use CodeIgniter\Model;
 
 class CrewModel extends Model
 {
+    
 	public function PilihBlog($id)
     {
          $query = $this->getWhere(['id_crew' => $id]);

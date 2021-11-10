@@ -15,13 +15,22 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-            <?php endif; ?>
-            <form method="post" action="<?= base_url('layanan/update/' . $layanan->id_layanan) ?>">
+            <?php endif; ?><form method="post" action="<?php echo base_url('layanan/edit/');?>" enctype="multipart/form-data" accept-charset="utf-8">
                 <?= csrf_field(); ?>
-
+                <div class="form-group">
+                    <input type="hidden" class="form-control" id="id" name="id" value="<?= $layanan->id_layanan; ?>">
+                </div>
                 <div class="form-group">
                     <label for="nama">Nama</label>
                     <input type="text" class="form-control" id="nama" name="nama" value="<?= $layanan->desc; ?>">
+                </div>
+                <div class="col-md-12">
+                    <label>Gambar</label><br/>
+                    <?php
+                        if (!empty($layanan->gambar)) {
+                            echo '<img src="'.base_url("/uploads/layanan/$layanan->gambar").'" width="150">';
+                        }
+                    ?>
                 </div>
                 
                     <div class="form-group">

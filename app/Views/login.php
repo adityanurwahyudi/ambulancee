@@ -4516,7 +4516,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                                 </p>
                                 <p> 
                                     <label for="psw" class="youpasswd"> Your password </label>
-                                    <input id="password" name="password" required="required" type="password"  /> 
+                                    <input id="password" name="password" required="required" type="password" placeholder="Password" /> 
                                 </p>
                                 <p class="signin button"> 
 									<input type="submit" value="Login"/> 

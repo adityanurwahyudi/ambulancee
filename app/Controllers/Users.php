@@ -16,9 +16,9 @@ class Users extends BaseController
     public function index()
     {
         $users = new UsersModel();
-        $data['users'] = $users->paginate(2, 'users');
+        $data['users'] = $users->paginate(5, 'users');
         $data['pager'] = $users->pager;
-        $data['nomor'] = nomor($this->request->getVar('page_users'), 2);
+        $data['nomor'] = nomor($this->request->getVar('page_users'), 5);
         return view('admin/adminn', $data);
     }
     

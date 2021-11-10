@@ -9,7 +9,7 @@
 	        <ul class="navbar-nav ml-auto">
 	        	<li class="nav-item active"><a href="homee" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="about" class="nav-link">Tentang Kami</a></li>
-	        	<li class="nav-item"><a href="galeri" class="nav-link">Galeri</a></li>
+	        	<li class="nav-item"><a href="galerii" class="nav-link">Galeri</a></li>
 	        	<li class="nav-item"><a href="layanan" class="nav-link">Layanan</a></li>
 	          <li class="nav-item"><a href="contact" class="nav-link">Hubungi Kami</a></li>
 	        </ul>

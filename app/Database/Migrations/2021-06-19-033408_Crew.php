@@ -20,7 +20,7 @@ class Crew extends Migration
 				'type'           => 'VARCHAR',
 				'constraint'     => '255',
 			],
-			'berkas'       => [
+			'gambar'       => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',
 			],

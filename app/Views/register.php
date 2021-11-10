@@ -802,6 +802,9 @@ input.checkbox:checked:after {
 					<input class="text" type="text" id="username" name="username" placeholder="Username" required="true">
 					<input class="text email" type="text" id="name" name="name" placeholder="Nama Lengkap" required="true">
 					<input class="text" type="password" name="password" id="password" placeholder="Password" required="true">
+          <i id="show-password" class="fa fa-eye"></i>
+					<input class="text" type="password" name="password_conf" id="password_conf" placeholder="Confirm Password" required="true">
+					<i id="show-passwordd" class="fa fa-eye"></i>
 					
 					<input type="submit" value="SIGNUP">
 				</form>
@@ -825,5 +828,13 @@ input.checkbox:checked:after {
 	</div>
 	<!-- //main -->
 </body>
-
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}</script>
 </html>

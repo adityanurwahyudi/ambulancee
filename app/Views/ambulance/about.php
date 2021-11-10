@@ -168,48 +168,20 @@
             <h2 class="mb-4">Our Crew</h2>
           </div>
         </div>	
-				<div class="row">
+        <div class="row">
+					<?php foreach($crew as $row){ ?> 
 					<div class="col-md-6 col-lg-3 ftco-animate">
 						<div class="staff">
-							<div class="img" style="background-image: url(assets/images/chef-4.jpg);"></div>
+            <div class="img" style="background-image: url('<?php echo base_url('/uploads/crew/'.$row->gambar);?>');"></div>
 							<div class="text pt-4">
-								<h3>Zaenal Abidin</h3>
-								<span class="position mb-2">Crew</span>
-								
+								<h3><?= $row->nama ?></h3>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img" style="background-image: url(assets/images/chef-2.jpg);"></div>
-							<div class="text pt-4">
-								<h3>Ahmad Farabi</h3>
-								<span class="position mb-2">Crew</span>
-						
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img" style="background-image: url(assets/images/chef-3.jpg);"></div>
-							<div class="text pt-4">
-								<h3>Mi'raj Karomy</h3>
-								<span class="position mb-2">Crew</span>
-						
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img" style="background-image: url(assets/images/chef-1.jpg);"></div>
-							<div class="text pt-4">
-								<h3>Arif Hidayat</h3>
-								<span class="position mb-2">Crew</span>
-						
-							</div>
-						</div>
-					</div>
+					<?php } ?>
 				</div>
 			</div>
 		</section>
+    
+
 		<?= $this->endSection() ?>

@@ -27,7 +27,9 @@
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
+
             }
+            
         }
     </style>
     <!-- Custom styles for this template -->
@@ -56,11 +58,14 @@
                         <a class="nav-link" href="crew">Crew</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="kegiatan">Kegiatan</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="layanann">Layanan</a>
                     </li>
-                    <div class="pull-right">
-                    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="pull-right" style="float:right">
+                    <div class="dropdown" style="float:right">
+  <button class="btn btn-secondary dropdown-toggle"  style="float:right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Exit
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

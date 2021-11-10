@@ -36,8 +36,8 @@ $routes->get('/', 'Home::index');
 //ambulance
 $routes->get('homee', 'Page::homee');
 $routes->get('about', 'Page::about');
-$routes->get('galeri', 'Page::galeri');
-$routes->get('layanan', 'Page::layanan');
+$routes->get('galerii', 'Page::galerii');
+$routes->get('layanan', 'Home::layanan');
 //admin
 $routes->get('b_edit', 'Page::b_edit');
 
@@ -63,10 +63,25 @@ $routes->get('/contact', 'Contact::index');
 
 //crew
 $routes->get('c_crew', 'Page::c_crew');
-$routes->get('crew', 'Crew::index');
 $routes->get('crew/c_edit/(:num)', 'Crew::c_edit/$1');
 $routes->post('crew/update/(:num)', 'Crew::update/$1');
 $routes->get('crew/delete/(:num)', 'Crew::delete/$1');
+
+//galeri
+$routes->get('galeri', 'Galeri::index');
+$routes->get('c_galeri', 'Page::c_galeri');
+$routes->get('galeri/c_edit/(:num)', 'Galeri::g_edit/$1');
+$routes->post('galeri/update/(:num)', 'Galeri::update/$1');
+$routes->get('galeri/delete/(:num)', 'Galeri::delete/$1');
+
+//kegiatan
+$routes->get('c_kegiatan', 'Page::c_kegiatan');
+$routes->get('kegiatan/k_edit/(:num)', 'Kegiatan::k_edit/$1');
+$routes->post('kegiatan/update/(:num)', 'Kegiatan::update/$1');
+$routes->get('kegiatan/delete/(:num)', 'Kegiatan::delete/$1');
+$routes->get('kegiatan', 'Kegiatan::index');
+$routes->get('kegiatan', 'Kegiatan::index1');
+
 
 //layanan
 $routes->get('layanann', 'Layanan::index');

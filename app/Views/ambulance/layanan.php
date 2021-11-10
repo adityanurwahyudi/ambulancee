@@ -23,107 +23,21 @@
         </div>
       </div>
       <div class="row">
+      <?php
+            foreach ($layanan as $row){
+              ?>
         <div class="col-md-4 ftco-animate">
           <div class="blog-entry">
-            <a class="block-20" style="background-image: url('assets/images/ambulance101.jpg');">
-            </a>
+          <div class="block-20" style="background-image: url('<?php echo base_url('/uploads/layanan/'.$row->gambar);?>');">
+          </div>
             <div class="text pt-3 pb-4 px-4">
-
-              <h3 class="heading"><a>Pengantaran Jenazah Dalam & Luar Kota</a></h3>
-              <p style="color: #000000">Kami Melayani Pengantaran Jenazah Dalam & Luar Kota </p>
-
+              <h3 class="heading"><a><?= $row->nama; ?></a></h3>
+              <p style="color: #000000"><?= $row->desc; ?></p>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4 ftco-animate">
-          <div class="blog-entry">
-            <a class="block-20" style="background-image: url('assets/images/ambulance4.jpg');">
-            </a>
-            <div class="text pt-3 pb-4 px-4">
-
-              <h3 class="heading"><a>Antar Jemput Pasien Dalam & Luar Kota</a></h3>
-              <p style="color: #000000">Kami Melayani Antar Jemput Pasien Dalam & Luar Kota</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 ftco-animate">
-          <div class="blog-entry">
-            <a class="block-20" style="background-image: url('assets/images/cargo_jenazah.jpg');">
-            </a>
-            <div class="text pt-3 pb-4 px-4">
-
-              <h3 class="heading"><a>Pengiriman Jenazah Via Cargo</a></h3>
-              <p style="color: #000000">Kami Melayani Pengiriman Jenazah Via Cargo</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 ftco-animate">
-          <div class="blog-entry">
-            <a class="block-20" style="background-image: url('assets/images/ambulance103.jpg');">
-            </a>
-            <div class="text pt-3 pb-4 px-4">
-              <h3 class="heading"><a>Penjemputan jenazah via cargo</a></h3>
-              <p style="color: #000000">Kami melayani penjemputan jenazah via cargo</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 ftco-animate">
-          <div class="blog-entry">
-            <a class="block-20" style="background-image: url('assets/images/formalin.jpg');">
-            </a>
-            <div class="text pt-3 pb-4 px-4">
-              <h3 class="heading"><a>Pengawetan Jenazah (Formalin)</a></h3>
-              <p style="color: #000000">Kami Melayani Pengawetan Jenazah (Formalin)</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 ftco-animate">
-          <div class="blog-entry">
-            <a class="block-20" style="background-image: url('assets/images/pemandian.jpg');">
-            </a>
-            <div class="text pt-3 pb-4 px-4">
-              <h3 class="heading"><a>Pemandian Jenazah</a></h3>
-              <p style="color: #000000">Kami Melayani Pemandian Jenazah</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 ftco-animate">
-          <div class="blog-entry">
-            <a class="block-20" style="background-image: url('assets/images/peti jenazah.jpg');">
-            </a>
-            <div class="text pt-3 pb-4 px-4">
-
-              <h3 class="heading"><a>Peti Jenazah</a></h3>
-              <p style="color: #000000">kami menyediakan berbagai macam jenis peti jenazah.</p>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 ftco-animate">
-          <div class="blog-entry">
-            <a class="block-20" style="background-image: url('assets/images/standby.jpg');">
-            </a>
-            <div class="text pt-3 pb-4 px-4">
-
-              <h3 class="heading"><a>Standby Event</a></h3>
-              <p style="color: #000000">Kami melayani standby event di berbagai daerah berikut Dokter dan Perawat.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 ftco-animate">
-          <div class="blog-entry">
-            <a class="block-20" style="background-image: url('assets/images/rumahduka.jpg');">
-            </a>
-            <div class="text pt-3 pb-4 px-4">
-              <h3 class="heading"><a>Pelayanan Rumah Duka</a></h3>
-              <p style="color: #000000">Kami Melayani Pelayanan rumah duka</p>
-            </div>
-          </div>
-        </div>
-        
-  </section>
+        <?php
+            } ?>
+</div>
+        </section>
 	<?= $this->endSection() ?>

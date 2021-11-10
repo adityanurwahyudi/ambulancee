@@ -16,11 +16,10 @@ class Layanan extends BaseController
 	public function index()
 	{ 
 		$layanan = new LayananModel();
-        $data['layanan'] = $layanan->paginate(2, 'layanan');
+        $data['layanan'] = $layanan->paginate(5, 'layanan');
         $data['pager'] = $layanan->pager;
-        $data['nomor'] = nomor($this->request->getVar('page_layanan'), 2);
+        $data['nomor'] = nomor($this->request->getVar('page_layanan'), 5);
         return view('admin/layanann', $data);
-
 	}
 
 	public function create()
@@ -75,6 +74,23 @@ class Layanan extends BaseController
         }
         $data['layanan'] = $dataLayanan;
         return view('admin/l_edit', $data);
+    }
+    public function edit(){
+        $id = $this->request->getPost('id'); //ini name input 
+		
+        $nama = $this->request->getPost('nama');
+        $dataBerkas = $this->request->getFile('gambar');
+        $desc = $this->request->getPost('desc');
+        $fileName = $dataBerkas->getRandomName();
+        $dataBerkas->move('uploads/layanan/', $fileName);
+
+        $this->layanan->set('nama', $nama);
+        $this->layanan->set('gambar', $fileName);
+        $this->layanan->set('desc', $desc);
+        $this->layanan->where('id_layanan', $id);
+        $this->layanan->update();
+        session()->setFlashdata('success', 'Layanan Berhasil diupdate');
+		return redirect()->to(base_url('layanann'));    
     }
 	function delete($id)
     {

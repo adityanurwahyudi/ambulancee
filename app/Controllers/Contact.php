@@ -19,9 +19,9 @@ class Contact extends BaseController
         
         $contact = new ContactModel();
         $data['booking'] = $contact->paginate(5, 'contact');
-        $data['pager'] = $contact->pager;
-        $data['nomor'] = nomor($this->request->getVar('page_contact'),5);
+		$data['booking'] = $contact->where('status', 'Proses')->findAll();
+        
         return view('ambulance/contact', $data);
     }
-       
+ 
 }

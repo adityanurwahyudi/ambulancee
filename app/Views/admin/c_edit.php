@@ -16,12 +16,22 @@
                     </button>
                 </div>
             <?php endif; ?>
-            <form method="post" action="<?= base_url('crew/update/' . $crew->id_crew) ?>">
+            <form method="post" action="<?php echo base_url('crew/edit/');?>" enctype="multipart/form-data" accept-charset="utf-8">
                 <?= csrf_field(); ?>
-
+                <div class="form-group">
+                    <input type="hidden" class="form-control" id="id" name="id" value="<?= $crew->id_crew; ?>">
+                </div>
                 <div class="form-group">
                     <label for="nama">Nama</label>
                     <input type="text" class="form-control" id="nama" name="nama" value="<?= $crew->nama; ?>">
+                </div>
+                <div class="col-md-12">
+                    <label>Gambar</label><br/>
+                    <?php
+                        if (!empty($crew->gambar)) {
+                            echo '<img src="'.base_url("/uploads/crew/$crew->gambar").'" width="150">';
+                        }
+                    ?>
                 </div>
                     <div class="form-group">
                          <input type="file" id="gambar" name="gambar" class="form-control"> 
